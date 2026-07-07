@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: image-upload-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/visionflow
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+server:
+  port: 8081
+
+storage:
+  provider: local
+  upload-path: uploads/
+
+logging:
+  level:
+    root: INFO
